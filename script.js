@@ -51,6 +51,15 @@ function calculateResult() {
         grade = "F";
     }
 
+    let status;
+
+if (average >= 50) {
+    status = "PASS";
+}
+else {
+    status = "FAIL";
+}
+
 
     document.getElementById("resultName").textContent =
         studentName;
@@ -75,4 +84,37 @@ function calculateResult() {
 
     document.getElementById("grade").textContent =
         grade;
+    document.getElementById("status").textContent =
+    status;
+}
+function resetForm() {
+
+    document.getElementById("studentName").value = "";
+
+    document.getElementById("math").value = "";
+
+    document.getElementById("english").value = "";
+
+    document.getElementById("database").value = "";
+
+    document.getElementById("programming").value = "";
+
+
+    document.getElementById("resultName").textContent = "-";
+
+    document.getElementById("resultMath").textContent = "-";
+
+    document.getElementById("resultEnglish").textContent = "-";
+
+    document.getElementById("resultDatabase").textContent = "-";
+
+    document.getElementById("resultProgramming").textContent = "-";
+
+    document.getElementById("total").textContent = "-";
+
+    document.getElementById("average").textContent = "-";
+
+    document.getElementById("grade").textContent = "-";
+
+    document.getElementById("status").textContent = "-";
 }
